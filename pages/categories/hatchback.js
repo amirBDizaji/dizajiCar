@@ -1,5 +1,9 @@
+import CarsList from "@/components/templates/CarsList";
+import carsData from "@/data/carsData";
+
 function hatchback() {
-  return <div>hatchback</div>;
+  const hatchbackCars = carsData.filter((car) => car.category === "hatchback");
+  return <CarsList data={hatchbackCars} />;
 }
 
 export default hatchback;

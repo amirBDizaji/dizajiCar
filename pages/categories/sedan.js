@@ -1,5 +1,9 @@
+import CarsList from "@/components/templates/CarsList";
+import carsData from "@/data/carsData";
+
 function sedan() {
-  return <div>sedan</div>;
+  const sedanCars = carsData.filter((car) => car.category === "sedan");
+  return <CarsList data={sedanCars} />;
 }
 
 export default sedan;
